@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-27 04:22:36</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>b56c813d0f024300cab6306be1050e5c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_68580_equipmentr_equipment_rental.x_68580_equipmentr.equipment_rental_user</sys_name>
+        <sys_package display_value="EquipmentRental" source="x_68580_equipmentr">0f1ac1790fce0300cab6306be1050eaa</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="EquipmentRental">0f1ac1790fce0300cab6306be1050eaa</sys_scope>
+        <sys_security_acl display_value="x_68580_equipmentr_equipment_rental">b16c813d0f024300cab6306be1050e4d</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_b56c813d0f024300cab6306be1050e5c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-27 04:22:36</sys_updated_on>
+        <sys_user_role display_value="x_68580_equipmentr.equipment_rental_user" name="x_68580_equipmentr.equipment_rental_user">796c813d0f024300cab6306be1050e3d</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

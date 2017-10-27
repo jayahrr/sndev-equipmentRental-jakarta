@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" extends="cmdb_ci_lb" label="ACE" max_length="40" name="cmdb_ci_lb_ace" type="collection">
+        <element label="isRentable" max_length="40" name="x_68580_equipmentr_is_rentable" type="boolean"/>
+    </element>
+</database>
