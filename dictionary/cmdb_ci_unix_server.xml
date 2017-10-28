@@ -2,5 +2,6 @@
 <database>
     <element audit="true" extends="cmdb_ci_server" label="UNIX Server" max_length="40" name="cmdb_ci_unix_server" sizeclass="7" type="collection">
         <element label="isRentable" max_length="40" name="x_68580_equipmentr_is_rentable" type="boolean"/>
+        <element label="Rental Price per Hour" max_length="20" name="x_68580_equipmentr_rental_rate" type="price"/>
     </element>
 </database>
