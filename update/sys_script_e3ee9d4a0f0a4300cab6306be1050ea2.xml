@@ -35,21 +35,9 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 
-	// Stores rental duration as GlideDateTime object and extracts the hours
-	// 3600000 milliseconds per hour
-	var gdt = new GlideDateTime(current.u_rental_duration); 
-	var hrs = gdt.getNumericValue()/3600000; 
-	
-    // Acquire Rental Equipment's Rental Rate
-	var gr = new GlideRecord('cmdb_ci_computer');
-		gr.get(current.u_equipment);
-	var pricePerHr = gr.x_68580_equipmentr_rental_rate;
-	
-	// Calculate the estimated price - Rental Rate * Rental Duration
-	var price = hrs * pricePerHr;
-	
-	// Set the estimated price
-	current.setValue('u_estimated_price', price);
+	// Use the RentalPriceCalculator utility to calculate the Estimated Rental Price
+	var rpu = new AJAXRentalPriceUtil();
+	current.u_estimated_price = rpu.price(current.u_rental_duration, current.u_equipment);
 	
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -59,7 +47,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>e3ee9d4a0f0a4300cab6306be1050ea2</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_name>Equipment Rental Estimated Price</sys_name>
         <sys_overrides/>
         <sys_package display_value="EquipmentRental" source="x_68580_equipmentr">0f1ac1790fce0300cab6306be1050eaa</sys_package>
@@ -68,7 +56,7 @@
         <sys_scope display_value="EquipmentRental">0f1ac1790fce0300cab6306be1050eaa</sys_scope>
         <sys_update_name>sys_script_e3ee9d4a0f0a4300cab6306be1050ea2</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-10-28 01:26:40</sys_updated_on>
+        <sys_updated_on>2017-10-31 00:04:23</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>
