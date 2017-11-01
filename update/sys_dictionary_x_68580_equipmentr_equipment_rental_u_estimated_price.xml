@@ -15,7 +15,7 @@
         <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label>Estimated Price</column_label>
+        <column_label>Estimated price</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -54,15 +54,15 @@
         <sys_created_on>2017-10-27 05:06:17</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>172611b10f424300cab6306be1050eb3</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>Estimated Price</sys_name>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Estimated price</sys_name>
         <sys_package display_value="EquipmentRental" source="x_68580_equipmentr">0f1ac1790fce0300cab6306be1050eaa</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="EquipmentRental">0f1ac1790fce0300cab6306be1050eaa</sys_scope>
         <sys_update_name>sys_dictionary_x_68580_equipmentr_equipment_rental_u_estimated_price</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-10-27 05:06:17</sys_updated_on>
+        <sys_updated_on>2017-11-01 03:40:47</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

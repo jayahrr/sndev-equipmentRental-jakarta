@@ -2,6 +2,6 @@
 <database>
     <element extends="cmdb_ci_server_hardware" label="Server Tape Unit" max_length="40" name="cmdb_ci_tape_server" type="collection">
         <element label="isRentable" max_length="40" name="x_68580_equipmentr_is_rentable" type="boolean"/>
-        <element label="Rental Price per Hour" max_length="20" name="x_68580_equipmentr_rental_rate" type="price"/>
+        <element label="Rental price per hour" max_length="20" name="x_68580_equipmentr_rental_rate" type="price"/>
     </element>
 </database>

@@ -13,6 +13,7 @@
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
 	if (isLoading || newValue === '' || newValue === oldValue) {
 		g_form.hideFieldMsg('u_rental_duration', true);
+		g_form.hideFieldMsg('u_estimated_price', true);
 		return;
 	}
 
@@ -58,7 +59,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ece6fc430f420300cab6306be1050e9b</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>Duration change message - start</sys_name>
         <sys_overrides/>
         <sys_package display_value="EquipmentRental" source="x_68580_equipmentr">0f1ac1790fce0300cab6306be1050eaa</sys_package>
@@ -67,7 +68,7 @@
         <sys_scope display_value="EquipmentRental">0f1ac1790fce0300cab6306be1050eaa</sys_scope>
         <sys_update_name>sys_script_client_ece6fc430f420300cab6306be1050e9b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-10-31 23:39:16</sys_updated_on>
+        <sys_updated_on>2017-11-01 19:11:57</sys_updated_on>
         <table>x_68580_equipmentr_equipment_rental</table>
         <type>onChange</type>
         <ui_type>10</ui_type>

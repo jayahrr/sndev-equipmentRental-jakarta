@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="catalog_script_client">
+    <catalog_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_catalog>true</applies_catalog>
+        <applies_extended>false</applies_extended>
+        <applies_req_item>false</applies_req_item>
+        <applies_sc_task>false</applies_sc_task>
+        <applies_target_record>false</applies_target_record>
+        <applies_to>item</applies_to>
+        <cat_item display_value="Equipment Rental Request">1dba91eb0fce0300cab6306be1050e74</cat_item>
+        <cat_variable>IO:74abb16b0f024300cab6306be1050e77</cat_variable>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <messages/>
+        <name>ERR Populate Rental Duration/Cost - strt</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+	if (isLoading || newValue == '' || !g_form.getValue('u_rental_end') || !g_form.getValue('err_rental_rate')) {
+		return;
+	}
+
+	// Use the AJAXRentalPriceUtil utility to set field message for u_rental_duration
+	var ga = new GlideAjax('AJAXRentalPriceUtil');
+		ga.addParam('sysparm_name', 'durationClient');
+		ga.addParam('sysparm_start', g_form.getValue('u_rental_start'));
+		ga.addParam('sysparm_end', g_form.getValue('u_rental_end'));
+		ga.addParam('sysparm_schedule', '8b7feb750f464300cab6306be1050e71');
+		ga.addParam('sysparm_number', 'N/A');
+		ga.getXML(setDuration);
+
+	function setDuration(response) {
+		var result = response.responseXML.getElementsByTagName("result");
+		var hrs =   result[0].getAttribute("hrs");
+		g_form.setValue('err_rental_duration', hrs + ' Hours');
+		setPrice(result[0].getAttribute("gdt"));
+	}
+
+	// Use the AJAXRentalPriceUtil utility to set field message for u_estimated_price	
+	function setPrice (response) {
+		var ga = new GlideAjax('AJAXRentalPriceUtil');
+			ga.addParam('sysparm_name', 'price');
+			ga.addParam('sysparm_duration', response);
+			ga.addParam('sysparm_equipment', g_form.getValue('u_equipment'));
+			ga.getXML(setPriceValue);
+
+		function setPriceValue(response) {
+			var answer = response.responseXML.documentElement.getAttribute("answer");
+			var price = Number(answer).toFixed(2);
+			g_form.setValue('u_estimated_price', '$' + price);
+		}
+	}
+}]]></script>
+        <sys_class_name>catalog_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-11-01 18:48:02</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5cd1062f0f024300cab6306be1050e05</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>ERR Populate Rental Duration/Cost - strt</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="EquipmentRental" source="x_68580_equipmentr">0f1ac1790fce0300cab6306be1050eaa</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="EquipmentRental">0f1ac1790fce0300cab6306be1050eaa</sys_scope>
+        <sys_update_name>catalog_script_client_5cd1062f0f024300cab6306be1050e05</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-11-01 19:09:38</sys_updated_on>
+        <table/>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <variable_set/>
+        <view/>
+    </catalog_script_client>
+</record_update>
