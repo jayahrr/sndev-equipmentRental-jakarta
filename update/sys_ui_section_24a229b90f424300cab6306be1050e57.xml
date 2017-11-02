@@ -5,27 +5,27 @@
             <element>u_equipment</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-10-27 06:03:38</sys_created_on>
-            <sys_id>3183e5390f424300cab6306be1050e67</sys_id>
+            <sys_created_on>2017-11-02 04:34:19</sys_created_on>
+            <sys_id>8ca880bb0f064300cab6306be1050e52</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Equipment Details" display_value="Equipment Details" name="x_68580_equipmentr_equipment_rental" sys_domain="global" view="Default view">24a229b90f424300cab6306be1050e57</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-10-27 06:03:38</sys_updated_on>
+            <sys_updated_on>2017-11-02 04:34:19</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_equipment.install_status</element>
+            <element>u_equipment.x_68580_equipmentr_ischeckedout</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-10-27 06:03:38</sys_created_on>
-            <sys_id>b183e5390f424300cab6306be1050e67</sys_id>
+            <sys_created_on>2017-11-02 04:34:19</sys_created_on>
+            <sys_id>04a880bb0f064300cab6306be1050e53</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Equipment Details" display_value="Equipment Details" name="x_68580_equipmentr_equipment_rental" sys_domain="global" view="Default view">24a229b90f424300cab6306be1050e57</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-10-27 06:03:38</sys_updated_on>
+            <sys_updated_on>2017-11-02 04:34:19</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -33,13 +33,13 @@
             <element>.split</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-10-27 06:03:38</sys_created_on>
-            <sys_id>3583e5390f424300cab6306be1050e67</sys_id>
+            <sys_created_on>2017-11-02 04:34:19</sys_created_on>
+            <sys_id>84a880bb0f064300cab6306be1050e53</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Equipment Details" display_value="Equipment Details" name="x_68580_equipmentr_equipment_rental" sys_domain="global" view="Default view">24a229b90f424300cab6306be1050e57</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-10-27 06:03:38</sys_updated_on>
+            <sys_updated_on>2017-11-02 04:34:19</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
@@ -47,13 +47,13 @@
             <element>u_equipment.checked_out</element>
             <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-10-27 06:03:38</sys_created_on>
-            <sys_id>b583e5390f424300cab6306be1050e67</sys_id>
+            <sys_created_on>2017-11-02 04:34:19</sys_created_on>
+            <sys_id>08a880bb0f064300cab6306be1050e53</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Equipment Details" display_value="Equipment Details" name="x_68580_equipmentr_equipment_rental" sys_domain="global" view="Default view">24a229b90f424300cab6306be1050e57</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-10-27 06:03:38</sys_updated_on>
+            <sys_updated_on>2017-11-02 04:34:19</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -61,13 +61,13 @@
             <element>u_equipment.checked_in</element>
             <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-10-27 06:03:38</sys_created_on>
-            <sys_id>3983e5390f424300cab6306be1050e67</sys_id>
+            <sys_created_on>2017-11-02 04:34:19</sys_created_on>
+            <sys_id>88a880bb0f064300cab6306be1050e53</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Equipment Details" display_value="Equipment Details" name="x_68580_equipmentr_equipment_rental" sys_domain="global" view="Default view">24a229b90f424300cab6306be1050e57</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-10-27 06:03:38</sys_updated_on>
+            <sys_updated_on>2017-11-02 04:34:19</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

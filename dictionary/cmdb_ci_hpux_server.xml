@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
     <element audit="true" extends="cmdb_ci_unix_server" label="HPUX Server" max_length="40" name="cmdb_ci_hpux_server" type="collection">
+        <element label="isCheckedout" max_length="40" name="x_68580_equipmentr_ischeckedout" type="boolean"/>
         <element label="isRentable" max_length="40" name="x_68580_equipmentr_is_rentable" type="boolean"/>
         <element label="Rental price per hour" max_length="20" name="x_68580_equipmentr_rental_rate" type="price"/>
     </element>
