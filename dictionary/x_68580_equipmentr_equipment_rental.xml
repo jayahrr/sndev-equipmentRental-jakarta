@@ -2,11 +2,13 @@
 <database>
     <element audit="true" label="Equipment Rental" max_length="40" name="x_68580_equipmentr_equipment_rental" type="collection">
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Actual duration" max_length="40" name="u_actual_duration" read_only="true" type="glide_duration"/>
+        <element label="Actual drop off" max_length="40" name="u_actual_end" read_only="true" type="glide_date_time"/>
+        <element label="Actual pick up" max_length="40" name="u_actual_start" read_only="true" type="glide_date_time"/>
         <element label="Comments" max_length="4000" name="u_comments" type="journal"/>
         <element label="Equipment" mandatory="true" max_length="32" name="u_equipment" reference="cmdb_ci_computer" type="reference"/>
         <element label="Estimated Price" max_length="20" name="u_estimated_price" read_only="true" type="price"/>
         <element attributes="edge_encryption_enabled=true" label="Purpose" mandatory="true" max_length="320" name="u_purpose" type="string"/>
-        <element label="Rate" max_length="20" name="u_rate" type="string"/>
         <element label="Duration" max_length="40" name="u_rental_duration" read_only="true" type="glide_duration"/>
         <element label="Drop off date" mandatory="true" max_length="40" name="u_rental_end" type="glide_date_time"/>
         <element label="Pick up date" mandatory="true" max_length="40" name="u_rental_start" type="glide_date_time"/>

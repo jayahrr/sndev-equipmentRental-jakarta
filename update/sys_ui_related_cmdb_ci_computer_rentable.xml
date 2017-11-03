@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_related sys_domain="global" table="cmdb_ci_computer" version="2" view="Rentable">
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Computer - Rentable" name="cmdb_ci_computer" related_list="NULL" sys_domain="global" view="9b7cd1b50f424300cab6306be1050e1f">8b35c1d40f920300cab6306be1050ed3</list_id>
+            <order_by/>
+            <position>0</position>
+            <related_list>x_68580_equipmentr_equipment_rental.u_equipment</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-11-03 22:16:06</sys_created_on>
+            <sys_id>4335c1d40f920300cab6306be1050ed4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-11-03 22:16:06</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Computer - Rentable" name="cmdb_ci_computer" related_list="NULL" sys_domain="global" view="9b7cd1b50f424300cab6306be1050e1f">8b35c1d40f920300cab6306be1050ed3</list_id>
+            <order_by/>
+            <position>1</position>
+            <related_list>cmdb_ci_network_adapter.cmdb_ci</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-11-03 22:16:06</sys_created_on>
+            <sys_id>4735c1d40f920300cab6306be1050ed4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-11-03 22:16:06</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Computer - Rentable" name="cmdb_ci_computer" related_list="NULL" sys_domain="global" view="9b7cd1b50f424300cab6306be1050e1f">8b35c1d40f920300cab6306be1050ed3</list_id>
+            <order_by/>
+            <position>2</position>
+            <related_list>cmdb_software_instance.installed_on</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-11-03 22:16:06</sys_created_on>
+            <sys_id>4b35c1d40f920300cab6306be1050ed4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-11-03 22:16:06</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list action="INSERT_OR_UPDATE">
+            <calculated_name>Computer - Rentable</calculated_name>
+            <filter/>
+            <name>cmdb_ci_computer</name>
+            <order_by/>
+            <position/>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-11-03 22:16:06</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8b35c1d40f920300cab6306be1050ed3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Computer - Rentable</sys_name>
+            <sys_package display_value="EquipmentRental" source="x_68580_equipmentr">0f1ac1790fce0300cab6306be1050eaa</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="EquipmentRental">0f1ac1790fce0300cab6306be1050eaa</sys_scope>
+            <sys_update_name>sys_ui_related_cmdb_ci_computer_Rentable</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-11-03 22:16:06</sys_updated_on>
+            <sys_user/>
+            <view display_value="Rentable" name="Rentable">9b7cd1b50f424300cab6306be1050e1f</view>
+            <view_name/>
+        </sys_ui_related_list>
+    </sys_ui_related>
+</record_update>

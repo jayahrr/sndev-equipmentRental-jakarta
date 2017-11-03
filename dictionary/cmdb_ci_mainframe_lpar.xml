@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
     <element audit="true" extends="cmdb_ci_server" label="IBM Mainframe LPAR" max_length="40" name="cmdb_ci_mainframe_lpar" type="collection">
+        <element label="isCheckedout" max_length="40" name="x_68580_equipmentr_ischeckedout" type="boolean"/>
         <element label="isRentable" max_length="40" name="x_68580_equipmentr_is_rentable" type="boolean"/>
+        <element label="Last rented by" max_length="32" name="x_68580_equipmentr_last_rented_by" reference="sys_user" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
+        <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer" label="Rental rate" max_length="20" name="x_68580_equipmentr_rental_rate" type="price"/>
     </element>
 </database>
