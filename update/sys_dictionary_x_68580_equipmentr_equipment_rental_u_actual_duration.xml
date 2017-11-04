@@ -48,7 +48,7 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-11-03 21:56:33</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>77aad9140fd20300cab6306be1050e5c</sys_id>
+        <sys_id>aa5f346c0f5a0300cab6306be1050e72</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Actual duration</sys_name>
         <sys_package display_value="EquipmentRental" source="x_68580_equipmentr">0f1ac1790fce0300cab6306be1050eaa</sys_package>
@@ -57,7 +57,7 @@
         <sys_scope display_value="EquipmentRental">0f1ac1790fce0300cab6306be1050eaa</sys_scope>
         <sys_update_name>sys_dictionary_x_68580_equipmentr_equipment_rental_u_actual_duration</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2017-11-03 23:50:02</sys_updated_on>
+        <sys_updated_on>2017-11-04 16:29:05</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="x_68580_equipmentr_rental_rate" table="cmdb_ci_lb_netscaler">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="x_68580_equipmentr_rental_rate" table="cmdb_ci_computer">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes/>
+        <attributes>omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer</attributes>
         <audit>false</audit>
-        <calculation><![CDATA[(function calculatedFieldValue(current) {
-
-	// Add your code here
-	return '';  // return the calculated value
-
-})(current);]]></calculation>
-        <choice/>
+        <calculation/>
+        <choice>0</choice>
         <choice_field/>
         <choice_table/>
         <column_label>Rental rate</column_label>
@@ -34,7 +29,7 @@
         <internal_type display_value="Price">price</internal_type>
         <mandatory>false</mandatory>
         <max_length>20</max_length>
-        <name>cmdb_ci_lb_netscaler</name>
+        <name>cmdb_ci_computer</name>
         <next_element/>
         <primary>false</primary>
         <read_only>false</read_only>
@@ -51,9 +46,9 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>system</sys_created_by>
-        <sys_created_on>2017-11-03 23:49:45</sys_created_on>
+        <sys_created_on>2017-11-04 16:28:42</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>feaa99140fd20300cab6306be1050ee7</sys_id>
+        <sys_id>0c5fb06c0f5a0300cab6306be1050e3f</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Rental rate</sys_name>
         <sys_package display_value="EquipmentRental" source="x_68580_equipmentr">0f1ac1790fce0300cab6306be1050eaa</sys_package>
@@ -62,7 +57,7 @@
         <sys_scope display_value="EquipmentRental">0f1ac1790fce0300cab6306be1050eaa</sys_scope>
         <sys_update_name>sys_dictionary_cmdb_ci_computer_x_68580_equipmentr_rental_rate</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2017-11-03 23:49:45</sys_updated_on>
+        <sys_updated_on>2017-11-04 16:28:42</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
