@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="INSERT_OR_UPDATE">
+        <catalog_item display_value="Equipment Rental Request">1dba91eb0fce0300cab6306be1050e74</catalog_item>
+        <catalog_variable>IO:20ea392b0f024300cab6306be1050e14</catalog_variable>
+        <disabled>true</disabled>
+        <field/>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-11-01 18:28:04</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c67d71ab0f024300cab6306be1050eaf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>err_rental_location</sys_name>
+        <sys_package display_value="EquipmentRental" source="x_68580_equipmentr">0f1ac1790fce0300cab6306be1050eaa</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="EquipmentRental">0f1ac1790fce0300cab6306be1050eaa</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_c67d71ab0f024300cab6306be1050eaf</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-11-01 18:28:04</sys_updated_on>
+        <table/>
+        <ui_policy display_value="ERR Rate Price Duration Location set to Read Only">de2dfd6b0f024300cab6306be1050e21</ui_policy>
+        <variable>err_rental_location</variable>
+        <variable_set/>
+        <visible>ignore</visible>
+    </catalog_ui_policy_action>
+</record_update>

@@ -9,7 +9,7 @@
         <element label="Description" max_length="400" name="u_description" type="string"/>
         <element label="Equipment" mandatory="true" max_length="32" name="u_equipment" reference="cmdb_ci_computer" type="reference"/>
         <element label="Estimated Price" max_length="20" name="u_estimated_price" read_only="true" type="price"/>
-        <element label="Duration" max_length="40" name="u_rental_duration" read_only="true" type="glide_duration"/>
+        <element attributes="max_unit=hours" label="Duration" max_length="40" name="u_rental_duration" read_only="true" type="glide_duration"/>
         <element label="Drop off date" mandatory="true" max_length="40" name="u_rental_end" type="glide_date_time"/>
         <element label="Pick up date" mandatory="true" max_length="40" name="u_rental_start" type="glide_date_time"/>
         <element default="javascript:gs.getUserId();" dynamic_default_value="2fd8e97bef3221002841f7f775c0fbc1" label="Renter" mandatory="true" max_length="32" name="u_renter" reference="sys_user" reference_qual="active=true^locked_out=false^EQ" reference_qual_condition="active=true^locked_out=false^EQ" type="reference" use_dynamic_default="true"/>
