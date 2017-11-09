@@ -21,6 +21,15 @@
 	if (isLoading || newValue == '' || !g_form.getValue('u_rental_start') || !g_form.getValue('err_rental_rate')) {
 		return;
 	}
+	
+	// Validate that the pickup date is past the dropoff date
+	var start = new Date(getDateFromFormat(g_form.getValue('u_rental_start'), g_user_date_time_format));
+	var end = new Date(getDateFromFormat(g_form.getValue('u_rental_end'), g_user_date_time_format));
+	if (end < start) {
+		alert('Cannot choose a dropoff date that is past the pickup date!');
+		g_form.setValue('u_rental_end', oldValue);
+		return;
+	}	
 
 	// Use the AJAXRentalPriceUtil utility to set field message for u_rental_duration
 	var ga = new GlideAjax('AJAXEquipmentRentalUtil');
@@ -60,7 +69,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c08246eb0f024300cab6306be1050ebc</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>ERR Populate Rental Duration/Cost - end</sys_name>
         <sys_overrides/>
         <sys_package display_value="EquipmentRental" source="x_68580_equipmentr">0f1ac1790fce0300cab6306be1050eaa</sys_package>
@@ -69,7 +78,7 @@
         <sys_scope display_value="EquipmentRental">0f1ac1790fce0300cab6306be1050eaa</sys_scope>
         <sys_update_name>catalog_script_client_c08246eb0f024300cab6306be1050ebc</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-11-08 03:34:41</sys_updated_on>
+        <sys_updated_on>2017-11-09 04:59:12</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>10</ui_type>

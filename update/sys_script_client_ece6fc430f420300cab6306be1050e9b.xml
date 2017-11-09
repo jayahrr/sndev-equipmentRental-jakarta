@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Posts an info message with calculated Duration and Estimate Price. </description>
+        <field>u_rental_start</field>
+        <global>true</global>
+        <messages/>
+        <name>Duration change message - start</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	if (isLoading || newValue === '' || !g_form.getValue('u_rental_end') || !g_form.getValue('u_equipment')) {
+		g_form.clearMessages();
+		return;
+	}
+	
+	// Validate that the pickup date is past the dropoff date
+	var start = new Date(getDateFromFormat(g_form.getValue('u_rental_start'), g_user_date_time_format));
+	var end = new Date(getDateFromFormat(g_form.getValue('u_rental_end'), g_user_date_time_format));
+	if (end < start) {
+		alert('Cannot choose a pickup date that is past the dropoff date!');
+		g_form.setValue('u_rental_start', oldValue);
+		return;
+	}
+	
+	var durHrs;
+	
+	// Use the AJAXRentalPriceUtil utility to get duration hours for the info message
+	var ga = new GlideAjax('AJAXEquipmentRentalUtil');
+		ga.addParam('sysparm_name', 'durationClient');
+		ga.addParam('sysparm_start', g_form.getValue('u_rental_start'));
+		ga.addParam('sysparm_end', g_form.getValue('u_rental_end'));
+		ga.addParam('sysparm_schedule', '8b7feb750f464300cab6306be1050e71');
+		ga.addParam('sysparm_number', g_form.getValue('number'));
+		ga.getXML(setDurationMessage);
+
+	function setDurationMessage(response) {
+		var result = response.responseXML.getElementsByTagName("result");
+		durHrs =   result[0].getAttribute("hrs");
+		setPriceMessage(result[0].getAttribute("gdt"));
+	}
+
+	// Use the AJAXRentalPriceUtil utility to get estimated price for the info message	
+	function setPriceMessage (response) {
+		var ga = new GlideAjax('AJAXEquipmentRentalUtil');
+			ga.addParam('sysparm_name', 'price');
+			ga.addParam('sysparm_duration', response);
+			ga.addParam('sysparm_equipment', g_form.getValue('u_equipment'));
+			ga.getXML(postInfoMessage);
+
+		function postInfoMessage(response) {
+			var answer = response.responseXML.documentElement.getAttribute("answer");
+			var msg = 'Upon updating, Duration will be ' + durHrs + 'Hours and Estimated Price will be $' + Number(answer).toFixed(2) + '.';
+			g_form.clearMessages();
+			g_form.addInfoMessage(msg);
+		}
+	}
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-31 00:01:28</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ece6fc430f420300cab6306be1050e9b</sys_id>
+        <sys_mod_count>31</sys_mod_count>
+        <sys_name>Duration change message - start</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="EquipmentRental" source="x_68580_equipmentr">0f1ac1790fce0300cab6306be1050eaa</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="EquipmentRental">0f1ac1790fce0300cab6306be1050eaa</sys_scope>
+        <sys_update_name>sys_script_client_ece6fc430f420300cab6306be1050e9b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-11-09 05:05:55</sys_updated_on>
+        <table>x_68580_equipmentr_equipment_rental</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>
