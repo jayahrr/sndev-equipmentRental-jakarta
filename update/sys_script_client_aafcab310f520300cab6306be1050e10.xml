@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Set the variable editor to ReadOnly for all except users with the 'itil_admin' role. </description>
+        <field>u_actual_end</field>
+        <global>true</global>
+        <messages/>
+        <name>Variable Editor ReadOnly</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+	// Cancel if user has itil_admin role
+	if (g_user.hasRole('itil_admin'))
+		return;
+	
+	// Otherwise, set the variable editor fields to ReadOnly
+	g_form.setVariablesReadOnly(true);
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-11-09 02:24:25</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>aafcab310f520300cab6306be1050e10</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Variable Editor ReadOnly</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="EquipmentRental" source="x_68580_equipmentr">0f1ac1790fce0300cab6306be1050eaa</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="EquipmentRental">0f1ac1790fce0300cab6306be1050eaa</sys_scope>
+        <sys_update_name>sys_script_client_aafcab310f520300cab6306be1050e10</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-11-09 02:49:08</sys_updated_on>
+        <table>x_68580_equipmentr_equipment_rental</table>
+        <type>onLoad</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>
